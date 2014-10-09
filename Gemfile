@@ -30,6 +30,8 @@ gem 'quiet_assets'
 gem 'paperclip'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+gem "paperclip-dropbox", ">= 1.1.7"
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
