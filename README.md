@@ -4,29 +4,29 @@
 A simple 10 step process to get you up and running. This tutorial will go over how to use the Dropbox API to store your files/images while using paperclip to upload them in your app. This tutorial assumes you are using the paperclip gem and have it set up already. This is a great solution to store image uploads for your deployed applications.
 
 ### 1st : 
-##### Head on over to Dropbox.com and go through the motions to sign yourself up for an account. You will need one of these to use their API. Don't worry, it's free and they are an awesome company.
+Head on over to Dropbox.com and go through the motions to sign yourself up for an account. You will need one of these to use their API. Don't worry, it's free and they are an awesome company.
 
 ### 2nd : 
-##### Find your way to Dropbox.com/developers . Here is will you will be creating an app and registering it with Dropbox. Click on 'App Console' and then 'Create App'. Choose the 'Dropbox API app' selection and then choose 'Files and datastores'. The next part is up to you. I generally limit my app to only its own folder. Now, name it!
+Find your way to Dropbox.com/developers . Here is will you will be creating an app and registering it with Dropbox. Click on 'App Console' and then 'Create App'. Choose the 'Dropbox API app' selection and then choose 'Files and datastores'. The next part is up to you. I generally limit my app to only its own folder. Now, name it!
 
 ### 3rd : 
-##### On the next page you will find you 'App Key' and 'App Secret'. These wil be crucial in getting things fully setup.
+On the next page you will find you 'App Key' and 'App Secret'. These wil be crucial in getting things fully setup.
 
 ### 4th : 
-##### Head over to your Gemfile and include this guy and then bundle install:
+Head over to your Gemfile and include this guy and then bundle install:
 
 ```ruby
 gem "paperclip-dropbox", ">= 1.1.7"
 ```
 
 ### 5th : 
-##### This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and key that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github!
+This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and key that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github!
 
 ### 6th : 
-##### Now we are going to want to create a 'dropbox.yml' file in our 'config' folder.
+Now we are going to want to create a 'dropbox.yml' file in our 'config' folder.
 
 ### 7th : 
-##### This will be the code we put in the 'dropbox.yml' file if we are using 'Figaro':
+This will be the code we put in the 'dropbox.yml' file if we are using 'Figaro':
 
 ```yaml
 app_key: ENV['APP_KEY']
@@ -38,7 +38,7 @@ access_type: 'app_folder'
 ```
 
 ### 8th : 
-##### We now want to add some code to which ever model we are using 'Paperclip' on for uploads. This will be what the code looks like:
+We now want to add some code to which ever model we are using 'Paperclip' on for uploads. This will be what the code looks like:
 
 ```ruby
 has_attached_file :image,
@@ -52,7 +52,7 @@ has_attached_file :image,
 ```
 
 ### 9th : 
-##### Now in the terminal we will want to run this code :
+Now in the terminal we will want to run this code :
 
 ```sh
 rake dropbox:authorize APP_KEY="your_app_key" APP_SECRET="your_app_secret" ACCESS_TYPE=app_folder
@@ -61,7 +61,7 @@ rake dropbox:authorize APP_KEY="your_app_key" APP_SECRET="your_app_secret" ACCES
 It will respond with a URL. Visit this URL and allow your app persmission to your Dropbox. After doing so it will give you the remaining puzzle peices that we need. These will be in the form of an 'access token' and 'access token secret'. Use these to fill in the remaining fields in your application.yml/secrets.yml .
 
 ### 10th : 
-##### Last but not least... restart your app and start uploading! your uploads will no begin being saved to your Dropbox account. You can verify this by logging into Dropbox and checking out your apps folder to see all the uploads.
+Last but not least... restart your app and start uploading! your uploads will no begin being saved to your Dropbox account. You can verify this by logging into Dropbox and checking out your apps folder to see all the uploads.
 
 Hope this helps you with storing your uploads for your deployed application.
 
