@@ -70,7 +70,7 @@ rake dropbox:authorize APP_KEY="your_app_key" APP_SECRET="your_app_secret" ACCES
 It will respond with a URL. Visit this URL and allow your app persmission to your Dropbox. After doing so it will give you the remaining puzzle peices that we need. These will be in the form of an 'access token' , 'access token secret' and 'user_id' . Use these to fill in the remaining fields in your application.yml or secrets.yml file.
 
 ### 10th : 
-Last but not least... restart your app and start uploading! your uploads will no begin being saved to your Dropbox account. You can verify this by logging into Dropbox and checking out your apps folder to see all the uploads.
+Last but not least... restart your app and start uploading! Your uploads will no begin being saved to your Dropbox account. You can verify this by logging into Dropbox and checking out your apps folder to see all the uploads.
 
 Hope this helps you with storing your uploads for your deployed application.
 
