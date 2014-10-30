@@ -10,7 +10,7 @@ Head on over to [Dropbox] (http://dropbox.com) and go through the motions to sig
 Find your way to the [Developer] (http://dropbox.com/developers) section of their site. Here is will you will be creating an app and registering it with Dropbox. Click on 'App Console' and then 'Create App'. Choose the 'Dropbox API app' selection and then choose 'Files and datastores'. The next part is up to you. I generally limit my app to only its own folder. Now, name it!
 
 ### 3rd : 
-On the next page you will find you 'App Key' and 'App Secret'. These wil be crucial in getting things fully setup.
+On the next page you will find you 'App Key' and 'App Secret'. These wil be crucial in getting things fully setup. Go ahead and keep this page open in your browser for later.
 
 ### 4th : 
 Head over to your Gemfile and include this guy and then bundle install:
@@ -20,7 +20,16 @@ gem "paperclip-dropbox", ">= 1.1.7"
 ```
 
 ### 5th : 
-This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and key that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github!
+This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and keys that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github! In your application.yml file, add this code and replace the app_key and app_secret now:
+
+```yaml
+APP_KEY: "your credentials here"
+APP_SECRET: "your credentials here"
+ACCESS_TOKEN: "your credentials here"
+ACCESS_TOKEN_SECRET: "your credentials here"
+USER_ID: "your credentials here"
+ACCESS_TYPE: "app_folder"
+```
 
 ### 6th : 
 Now we are going to want to create a 'dropbox.yml' file in our 'config' folder.
