@@ -15,12 +15,12 @@ A simple 10 step process to get you up and running. This tutorial will go over h
 ### 4th : 
 ##### Head over to your Gemfile and include this guy and then bundle install:
 
-```
+```ruby
 gem "paperclip-dropbox", ">= 1.1.7"
 ```
 
 ### 5th : 
-##### This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to https://github.com/laserlemon/figaro for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and key that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github!
+##### This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and key that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github!
 
 ### 6th : 
 ##### Now we are going to want to create a 'dropbox.yml' file in our 'config' folder.
@@ -28,7 +28,7 @@ gem "paperclip-dropbox", ">= 1.1.7"
 ### 7th : 
 ##### This will be the code we put in the 'dropbox.yml' file if we are using 'Figaro':
 
-```
+```yaml
 app_key: ENV['APP_KEY']
 app_secret: ENV['APP_SECRET']
 access_token: ENV['ACCESS_TOKEN']
@@ -40,7 +40,7 @@ access_type: 'app_folder'
 ### 8th : 
 ##### We now want to add some code to which ever model we are using 'Paperclip' on for uploads. This will be what the code looks like:
 
-```
+```ruby
 has_attached_file :image,
     :storage => :dropbox,
     :dropbox_credentials => { app_key: ENV['APP_KEY'],
@@ -54,8 +54,7 @@ has_attached_file :image,
 ### 9th : 
 ##### Now in the terminal we will want to run this code :
 
-```
-
+```sh
 rake dropbox:authorize APP_KEY="your_app_key" APP_SECRET="your_app_secret" ACCESS_TYPE=app_folder
 ```
 
