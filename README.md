@@ -20,7 +20,7 @@ gem "paperclip-dropbox", ">= 1.1.7"
 ```
 
 ### 5th : 
-This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and keys that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github! In your application.yml file, add this code and replace the app_key and app_secret now:
+This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and keys that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github! In your application.yml file, add this code and replace the app_key and app_secret now with your info, we will the rest in later.
 
 ```yaml
 APP_KEY: "your credentials here"
@@ -67,7 +67,7 @@ Now in the terminal we will want to run this code :
 rake dropbox:authorize APP_KEY="your_app_key" APP_SECRET="your_app_secret" ACCESS_TYPE=app_folder
 ```
 
-It will respond with a URL. Visit this URL and allow your app persmission to your Dropbox. After doing so it will give you the remaining puzzle peices that we need. These will be in the form of an 'access token' and 'access token secret'. Use these to fill in the remaining fields in your application.yml/secrets.yml .
+It will respond with a URL. Visit this URL and allow your app persmission to your Dropbox. After doing so it will give you the remaining puzzle peices that we need. These will be in the form of an 'access token' , 'access token secret' and 'user_id' . Use these to fill in the remaining fields in your application.yml or secrets.yml file.
 
 ### 10th : 
 Last but not least... restart your app and start uploading! your uploads will no begin being saved to your Dropbox account. You can verify this by logging into Dropbox and checking out your apps folder to see all the uploads.
