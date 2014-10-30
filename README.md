@@ -20,7 +20,7 @@ gem "paperclip-dropbox", ">= 1.1.7"
 ```
 
 ### 5th : 
-This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and keys that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github! In your application.yml file, add this code and replace the app_key and app_secret now with your info, we will the rest in later.
+This part will be up to you. It depends on what version of Rails you are using and what you are comfortable with. For this example I will be using the gem 'Figaro'. Some of you may prefer to just use your secrets.yml file. All up to you! Head over to [Figaro] (https://github.com/laserlemon/figaro) for instructions on how to set 'Figaro". I like 'Figaro' to store all my secrets and keys that I might be using in my app because it automatically adds these to your .gitignore file via the application.yml file. Don't upload your secrets to Github! In your application.yml file, add this code and replace the app_key and app_secret now with your info, we will fill the rest in later.
 
 ```yaml
 APP_KEY: "your credentials here"
