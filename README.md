@@ -7,7 +7,7 @@ A simple 10 step process to get you up and running. This tutorial will go over h
 Head on over to [Dropbox] (http://dropbox.com) and go through the motions to sign yourself up for an account. You will need one of these to use their API. Don't worry, it's free and they are an awesome company.
 
 ### 2nd : 
-Find your way to Dropbox.com/developers . Here is will you will be creating an app and registering it with Dropbox. Click on 'App Console' and then 'Create App'. Choose the 'Dropbox API app' selection and then choose 'Files and datastores'. The next part is up to you. I generally limit my app to only its own folder. Now, name it!
+Find your way to the [Developer] (http://dropbox.com/developers) section of their site. Here is will you will be creating an app and registering it with Dropbox. Click on 'App Console' and then 'Create App'. Choose the 'Dropbox API app' selection and then choose 'Files and datastores'. The next part is up to you. I generally limit my app to only its own folder. Now, name it!
 
 ### 3rd : 
 On the next page you will find you 'App Key' and 'App Secret'. These wil be crucial in getting things fully setup.
