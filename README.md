@@ -4,7 +4,7 @@
 A simple 10 step process to get you up and running. This tutorial will go over how to use the Dropbox API to store your files/images while using paperclip to upload them in your app. This tutorial assumes you are using the paperclip gem and have it set up already. This is a great solution to store image uploads for your deployed applications.
 
 ### 1st : 
-Head on over to Dropbox.com and go through the motions to sign yourself up for an account. You will need one of these to use their API. Don't worry, it's free and they are an awesome company.
+Head on over to [Dropbox] (http://dropbox.com) and go through the motions to sign yourself up for an account. You will need one of these to use their API. Don't worry, it's free and they are an awesome company.
 
 ### 2nd : 
 Find your way to Dropbox.com/developers . Here is will you will be creating an app and registering it with Dropbox. Click on 'App Console' and then 'Create App'. Choose the 'Dropbox API app' selection and then choose 'Files and datastores'. The next part is up to you. I generally limit my app to only its own folder. Now, name it!
